@@ -1,0 +1,49 @@
+<head>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<script src="contact_form.js"></script>
+
+<div class="navigation">
+    <a class="active" href="home.html">Home</a>
+    <a href="bookings.html">Bookings</a>
+    <a href="locations.html">Locations</a>
+    <a href="contact.html">Contact</a>
+    <a href="signUp.html">Sign Up</a>
+</div>
+
+
+
+<body>
+
+    <h3>Contact Form</h3>
+    <div class="input">
+      <form method="post">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="united kingdom">United Kingdom</option>
+          <option value="france">France</option>
+          <option value="spain">Spain</option>
+        </select>
+    
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+        <button onclick="contact_check()">Submit</button>
+      </form>
+    </div>
+
+    <p id="error">hi</p>
+    
+</body>
+
+<body>
+    <h3>Our Team</h3>
+    <img src="yin.jfif" alt="Avatar" class="avatar">
+</body>
