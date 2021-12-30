@@ -102,6 +102,7 @@ body{
 }
 
 input[type=text], select, textarea {
+    color:black;
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
     border: 1px solid #ccc; /* Gray border */
@@ -113,6 +114,7 @@ input[type=text], select, textarea {
   }
 
   input[type=email], select, textarea {
+    color:black;
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
     border: 1px solid #ccc; /* Gray border */
