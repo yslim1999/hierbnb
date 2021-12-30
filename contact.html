@@ -19,8 +19,6 @@
     <a href="signUp.html">Sign Up</a>
 </div>
 
-
-
 <div class="container" style="width: 75%;padding-bottom: 5rem;text-align: center;">
   <h3 class="contact_title">Contact Form</h3>
     <div class="contact">
@@ -34,8 +32,8 @@
         <label for="lname">Email</label>
         <input type="text" id="email" name="email" placeholder="Your email address.." required>
     
-        <label for="country">Country</label>
-        <select id="country" name="country">
+        <label for="country">Branch</label>
+        <select id="country" name="country" class="country">
           <option value="united kingdom">United Kingdom</option>
           <option value="france">France</option>
           <option value="spain">Spain</option>
@@ -44,7 +42,7 @@
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
     
-        <button onclick="contact_check()">Submit</button>
+        <button class="submit_button" onclick="contact_check()"><span>Submit</span></button>
       </form>
     </div>
 
@@ -59,4 +57,15 @@
     <div class="col-sm-3"><img src="images/avatar2.jpg" alt="Avatar1" class="avatar"></div>
     <div class="col-sm-3"><img src="images/avatar3.jpg" alt="Avatar2" class="avatar"></div>
     <div class="col-sm-3"><img src="images/avatar4.jpg" alt="Avatar3" class="avatar"></div>
+</div>
+
+<div class="footer">
+  <div class="container" style="width: 75%;text-align: center;">
+    <nav class="navbar-expand-lg navbar-light">
+      <p>HierBNB.com © 2021</p>
+      <a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a>
+      <a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a>
+      <a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a>
+    </nav>
+  </div>
 </div>
