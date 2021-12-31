@@ -1,32 +1,39 @@
 <head>
-    <link rel="stylesheet" href="main.css">
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://use.fontawesome.com/8e6c72da53.js"></script>
 </head>
 
 <script src="contact_form.js"></script>
 
 <div class="navigation">
-    <a class="active" href="home.html">Home</a>
+    <a href="home.html">Home</a>
     <a href="bookings.html">Bookings</a>
     <a href="locations.html">Locations</a>
-    <a href="contact.html">Contact</a>
+    <a class="active" href="contact.html">Contact</a>
     <a href="signUp.html">Sign Up</a>
 </div>
 
-
-
-<body>
-
-    <h3>Contact Form</h3>
-    <div class="input">
-      <form method="post">
+<div class="container" style="width: 75%;padding-bottom: 5rem;text-align: center;">
+  <h3 class="contact_title">Contact Form</h3>
+    <div class="contact">
+      <form method="post" class="input">
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
     
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your email address.." required>
     
-        <label for="country">Country</label>
-        <select id="country" name="country">
+        <label for="country">Branch</label>
+        <select id="country" name="country" class="country">
           <option value="united kingdom">United Kingdom</option>
           <option value="france">France</option>
           <option value="spain">Spain</option>
@@ -35,15 +42,30 @@
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
     
-        <button onclick="contact_check()">Submit</button>
+        <button class="submit_button" onclick="contact_check()"><span>Submit</span></button>
       </form>
     </div>
 
-    <p id="error">hi</p>
+    <p id="error"></p>
     
-</body>
+  </div>
 
-<body>
-    <h3>Our Team</h3>
-    <img src="yin.jfif" alt="Avatar" class="avatar">
-</body>
+<div class="container" style="width: 75%;padding-bottom: 5rem;text-align: center;">
+  <h3>Our Team</h3>
+    <p>The HeirBnB team strive to provide premium castle booking services to ensure that all clients have a monarchical experience. Our number #1 value is to treat every customer like royalty.</p>
+    <div class="col-sm-3"><img src="images/avatar1.jpg" alt="Avatar" class="avatar"></div>
+    <div class="col-sm-3"><img src="images/avatar2.jpg" alt="Avatar1" class="avatar"></div>
+    <div class="col-sm-3"><img src="images/avatar3.jpg" alt="Avatar2" class="avatar"></div>
+    <div class="col-sm-3"><img src="images/avatar4.jpg" alt="Avatar3" class="avatar"></div>
+</div>
+
+<div class="footer">
+  <div class="container" style="width: 75%;text-align: center;">
+    <nav class="navbar-expand-lg navbar-light">
+      <p>HierBNB.com © 2021</p>
+      <a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a>
+      <a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a>
+      <a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a>
+    </nav>
+  </div>
+</div>
