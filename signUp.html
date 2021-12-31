@@ -1,0 +1,54 @@
+<head>
+    <title>Sign Up</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://use.fontawesome.com/8e6c72da53.js"></script>
+</head>
+
+<div class="navigation">
+    <a href="home.html">Home</a>
+    <a href="bookings.html">Bookings</a>
+    <a href="locations.html">Locations</a>
+    <a href="contact.html">Contact</a>
+    <a class="active" href="signUp.html">Sign Up</a>
+</div>
+
+<div class="container" style="width: 75%;padding-bottom: 5rem;text-align: center;">
+    <h3 class="contact_title">Sign Up</h3>
+    <div class="contact">
+        <form method="post" class="input">
+            <label for="uname">Username</label>
+            <input type="text" id="uname" name="username" placeholder="Username" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email address" placeholder="Email Address" required>
+
+            <label for="pword">Password</label>
+            <input type="password" id="pword" name="Password" placeholder="Choose Password" required>
+
+            <label for="confirmPword">Confirm Password</label>
+            <input type="password" id="confirmPword" name="ConfirmPassword" placeholder="Confirm Password" required>
+            <!-- This will need some kind of validation with the original password -- that sounds like a javascript thing -->
+
+            <button class="submit_button" onclick="signup_check()"><span>Submit</span></button>
+        </form>
+    </div>
+
+    <p id="error"></p>
+
+</div>
+
+<div class="footer">
+    <div class="container" style="width: 75%;text-align: center;">
+      <nav class="navbar-expand-lg navbar-light">
+        <p>HeirBNB.com © 2021</p>
+        <a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a>
+        <a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a>
+        <a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a>
+      </nav>
+    </div>
+  </div>
