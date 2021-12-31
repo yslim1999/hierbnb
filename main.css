@@ -8,6 +8,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.logo{
+    width: 100px;
+}
+
 /* Navbar */
 
 .navigation{
@@ -24,7 +28,7 @@ body::-webkit-scrollbar {
     font-size: 17px;
 }
 
-.navigation a:hover{
+.navigation .highlight:hover{
     background-color: #ddd;
     color: #000;
 }
@@ -46,24 +50,25 @@ body::-webkit-scrollbar {
   }
 
 .footer a{
-    float: right;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-
-.footer p{
     float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 17px;
+    height: min-content;
+  }
+
+.footer p{
+    float: right;
+    color: #f2f2f2;
+    text-align:center;
+    padding: 14px 16px;
+    text-decoration: none;
     font-size: 13px;
 }
 
-.footer a:hover{
+.footer .highlight:hover{
     background-color: #ddd;
     color: #000;
 }
