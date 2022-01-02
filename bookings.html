@@ -9,8 +9,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="main.css">
     <script src="https://use.fontawesome.com/8e6c72da53.js"></script>
-</head>
-<body>
+    <script src="booking.js"></script>
+<body style="min-height: 100vh;">
+
+    <!-- Navbar ------------------------------->
     <nav class="navigation navbar navbar-expand-lg navbar-light ">
         <div class="container" style="width: 90%;text-align: center;">
             <a class="navbar-brand" href="home.html"><img class="logo" src="home_svgs/HeirBnB_Logo.svg" alt=""></a>
@@ -22,9 +24,137 @@
           </div>
       </nav>
 
+
+      <!-- Tabs container ------------------------------->
+      <div class="bookings-container">
+
+        <ul class="nav nav-pills">
+          <li class="active"><a data-toggle="tab" href="#home">Make a Booking</a></li>
+          <li><a data-toggle="tab" href="#yourBookings">Confirmed Bookings</a></li>
+        </ul>
+
+
+      <!-- FIRST TAB ------------------------------->
+
+
+        <div class="tab-content container" style="width: 90%;padding-top: 2%;padding-bottom: 2%;">
+          <div id="home" class="tab-pane fade in active">
+              <h1 style="padding-bottom: 10px;">Booking Process</h1>
+              <div class="row">
+                <div class="col-sm-4">
+                    <h3>Initial Call</h3>
+                    <p style="float: left;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quibusdam quidem nobis nam, rerum dolor distinctio autem fugiat nemo rem consequatur quae facilis doloribus commodi exercitationem assumenda odio illum harum.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Booking Confirmation</h3>
+                    <p style="float: left;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quibusdam quidem nobis nam, rerum dolor distinctio autem fugiat nemo rem consequatur quae facilis doloribus commodi exercitationem assumenda odio illum harum.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Plan your Event/Stay</h3>
+                    <p style="float: left;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quibusdam quidem nobis nam, rerum dolor distinctio autem fugiat nemo rem consequatur quae facilis doloribus commodi exercitationem assumenda odio illum harum.</p>
+                </div>
+              </div>
+              <hr>
+            
+
+                <!-- Bookings form ------------------------------->
+                <form id="bookings"method="post" class="input">
+
+                    <div class="row" style="padding-bottom: 10px;">
+                        <div class="col-sm-3">
+                            <label for="check-in">Check In</label>
+                            <input style="color: #222;" type="date" id="check-in" name="cehck-in" required>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="check-ou">Check-out</label>
+                            <input style="color: #222;" type="date" id="check-out" name="cehck-in" required>
+                        </div>
+                
+                    </div>
+
+                    <label for="fname">Phone Number</label>
+                    <input type="text" id="number" name="number" placeholder="Your number" required>
+                
+                    <label for="email">Number of Guests</label>
+                    <input type="text" id="guests" name="guests" placeholder="# of Guests" required>
+                
+                    <label for="location">Location</label>
+                    <select id="location" required>
+                        <option value="Bodiam Castle">Bodiam Castle</option>
+                        <option value="Lowther Castle">Lowther Castle</option>
+                        <option value="Moyland Castle">Moyland Castle</option>
+                        <option value="Moyland Castle">Middleham Castle</option>
+                        <option value="Moyland Castle">Arundel Castle</option>
+                    </select>
+                
+                    <label for="requests">Tell us more</label>
+                    <textarea id="requests" name="requests" placeholder="Outline the vision for your stay/event.A team memeber will get back to you and help make it to reality." style="height:100px"></textarea>
+                
+                    <button class="submit_button" onclick="contact_check()"><span>Submit</span></button>
+                  </form>
+          </div>
+
+
+          <!-- Second TAB ------------------------------->
+
+          <div id="yourBookings" class="tab-pane fade">
+            <h3>View Your Bookings</h3>
+            <p>View all past, present and future bookings including pictures from your past events/stays.</p>
+            <hr>
+            <h3 style="text-align: center;padding-bottom: 10px;">Your Bookings</h3>
+            <div class="row" style="padding: 20px;">
+                <div class="col-sm-4"><img src="home_svgs/undraw_booking_re_gw4j.svg" alt=""></div>
+                <div class="col-sm-8"><h4>You have no bookings to view</h4><p>Click <a href="">here</a> to make a booking.</p></div>
+              </div>
+            <!--table styling for js 
+                <table class="table table-striped" style="color: white;">
+                <thead style="background-color: rgb(41, 40, 40);">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody style="background-color: white;color: black;">
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>-->
+
+
+              <hr>
+              <h3 style="text-align: center;padding: 10px">Your Pictures</h3>
+              <div class="row" style="padding: 20px;">
+                <div class="col-sm-4"><img src="home_svgs/undraw_photo_session_clqr.svg" alt=""></div>
+                <div class="col-sm-8"><h4>You have no pictures to view</h4><p>Talk to one of our team members for more information about our photography services.</p></div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 20px;"></div>
+
     
     <!-- remove the style from element once content is in page-->
-    <div class="footer" style="position: absolute;">
+    <div class="footer">
         <div class="container" style="width: 75%;text-align: center;">
           <nav class="navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="home.html"><img class="logo" src="home_svgs/HeirBnB_Logo.svg" alt=""></a>
