@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="main.css">
     <script src="https://use.fontawesome.com/8e6c72da53.js"></script>
 </head>
+
+<script src="sign_up.js"></script>
+
 <body>
 <nav class="navigation navbar navbar-expand-lg navbar-light ">
     <div class="container" style="width: 90%;text-align: center;">
@@ -23,6 +26,7 @@
 <div class="container" style="width: 75%;padding-bottom: 5rem;text-align: center;">
     <h3 class="contact_title">Sign Up</h3>
     <div class="contact">
+      <p id="status"></p>
         <form method="post" class="input">
             <label for="uname">Username</label>
             <input type="text" id="uname" name="username" placeholder="Username" required>
@@ -39,15 +43,31 @@
 
             <!-- Comment test. -->
 
-            <button class="submit_button" onclick="signup_check()"><span>Submit</span></button>
+            <button id="sign_up" class="submit_button" type="button" onclick="store()"><span>Submit</span></button>
         </form>
     </div>
-
-    <p id="error"></p>
-
 </div>
 
-<div class="footer" style="position: absolute;">
+<div class="container" style="width: 75%;padding-bottom: 5rem;text-align: center;">
+  <h3 class="contact_title">Sign In</h3>
+  <div class="contact">
+    <p id="status"></p>
+    <form method="post" class="input">
+      <label for="uname">Username</label>
+      <input type="text" id="uname" name="username" placeholder="Username" required>
+
+      <label for="pword">Password</label>
+      <input type="password" id="pword" name="Password" placeholder="Choose Password" required>
+      <!-- This will need some kind of validation with the original password -- that sounds like a javascript thing -->
+
+      <!-- Comment test. -->
+
+      <button id="sign_up" class="submit_button" type="button" onclick="store()"><span>Submit</span></button>
+  </form>
+  </div>
+</div>
+
+<div class="footer">
     <div class="container" style="width: 75%;text-align: center;">
       <nav class="navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="home.html"><img class="logo" src="home_svgs/HeirBnB_Logo.svg" alt=""></a>
