@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Sign Up</title>
     <meta charset="utf-8">
@@ -24,7 +26,7 @@
   </nav>
 
   <!-- Tabs container ------------------------------->
-  <div class="signUp-container">
+  <div class="bookings-container">
 
     <ul class="nav nav-pills">
       <li class="active"><a data-toggle="tab" href="#home">Sign In</a></li>
@@ -33,31 +35,33 @@
 
         <!-- FIRST TAB ------------------------------->
 
-  <div class="tab-content container" style="width: 75%;padding-bottom: 5rem;text-align: center;">
+  <div class="tab-content container">
     <div id="home" class="tab-pane fade in active">
-    <h3 class="contact_title">Sign In</h3>
-    <div class="contact">
-      <p id="status_sign_in"></p>
-      <form method="post" class="input" onsubmit="return checkIfCaseExists()" action="javascript:retrieveRecords()">
-        <label for="uname_">Username</label>
-        <input type="text" id="uname_" name="username" placeholder="Username" required>
-  
-        <label for="pword_">Password</label>
-        <input type="password" id="pword_" name="Password" placeholder="Choose Password" required>
-        <!-- This will need some kind of validation with the original password -- that sounds like a javascript thing -->
-  
-        <!-- Comment test. -->
-  
-        <button id="sign_" class="submit_button" type="submit"><span>Submit</span></button>
-    </form>
-    </div>
+      <h3 class="contact_title">Sign In</h3>
+      <div class="contact">
+        <p id="status_sign_in"></p>
+        <form method="post" class="input" onsubmit="return checkIfCaseExists()" action="javascript:retrieveRecords()">
+          <label for="uname_">Username</label>
+          <input type="text" id="uname_" name="username" placeholder="Username" required>
+    
+          <label for="pword_">Password</label>
+          <input type="password" id="pword_" name="Password" placeholder="Choose Password" required>
+          <!-- This will need some kind of validation with the original password -- that sounds like a javascript thing -->
+    
+          <!-- Comment test. -->
+    
+          <button id="sign_" class="submit_button" type="submit"><span>Submit</span></button>
+      </form>
+      </div>
   </div>
+  
+
 
    <!-- Second TAB ------------------------------->
 
-<div class="container" style="width: 75%;padding-bottom: 5rem;text-align: center;">
+<div id="yourAccount" class="tab-pane fade">
     <h3 class="contact_title">Sign Up</h3>
-    <div class="contact">
+    <div class="contact" >
       <p id="status"></p>
         <form method="post" class="input" onsubmit="return checkIfCaseExists()" action="javascript:store()">
             <label for="uname">Username</label>
@@ -79,8 +83,10 @@
         </form>
     </div>
 </div>
+</div>
+</div>
 
-<div class="footer">
+<div class="footer" style="position: absolute;">
     <div class="container" style="width: 75%;text-align: center;">
       <nav class="navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="home.html"><img class="logo" src="home_svgs/HeirBnB_Logo.svg" alt=""></a>
@@ -92,3 +98,4 @@
     </div>
   </div>
 </body>
+</html>
