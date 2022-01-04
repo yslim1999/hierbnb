@@ -5,6 +5,11 @@ function store(){ //stores items in the localStorage
     var pass_ver = document.getElementById('confirmPword').value;
     console.log("Value stored.");
     var acc = pass
+    if(uname.valueOf() == "log_status"){
+        alert("Username not accepted. Please try to use a different username.")
+        return;
+    }
+
     if(pass_ver.valueOf() != pass.valueOf()){
         alert("Passwords are not matching. Please re-enter matching passwords.")
         return;
@@ -30,13 +35,14 @@ function retrieveRecords(){ //retrieves items in the localStorage
     document.getElementById('pword_').value = "";
     var record = JSON.parse(window.localStorage.getItem(key));
     if (record.valueOf() ==  pass.hashCode().valueOf()){
+        window.localStorage.setItem("log_status", key);
         alert("You have successfully signed in.")
-        var paragraph = document.createElement("p");
-        var infor = document.createTextNode(record);
-        paragraph.appendChild(infor);
-        var element = document.getElementById("status_sign_in");
-        element.appendChild(paragraph);
     }
+}
+
+function sign_out(){
+    window.localStorage.removeItem("log_status");
+    alert("You are now logged out.")
 }
 
 String.prototype.hashCode = function() {
