@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="main.css">
     <script src="https://use.fontawesome.com/8e6c72da53.js"></script>
     <script src="booking.js"></script>
-<body style="min-height: 100vh;">
+<body style="min-height: 100vh;" onload="loadBookings()">
 
     <!-- Navbar ------------------------------->
     <nav class="navigation navbar navbar-expand-lg navbar-light ">
@@ -103,7 +103,7 @@
             <p>View all past, present and future bookings including pictures from your past events/stays.</p>
             <hr>
             <h3 style="text-align: center;padding-bottom: 10px;">Your Bookings</h3>
-            <div class="row" style="padding: 20px;">
+            <div id="displayBookings" class="row" style="padding: 20px;">
                 <div class="col-sm-4"><img src="home_svgs/undraw_booking_re_gw4j.svg" alt=""></div>
                 <div class="col-sm-8"><h4>You have no bookings to view</h4><p>Click <a href="">here</a> to make a booking.</p></div>
               </div>

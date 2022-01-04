@@ -17,13 +17,13 @@ function storeBooking(){ //stores bookings in the localStorage
     console.log(checkOut);
     if(window.localStorage.getItem("bookings")){
         var bookings = window.localStorage.getItem("bookings");
-        bookings = bookings.concat("<tr><th>"+location+"</th><td>"+checkIn+"</td><td>"+checkOut+"</td><td>Team member is reviewing your booking and will call you as soon as possible</td></tr>");
+        bookings = bookings.concat("<tr><th>"+location+"</th><td>"+guests+"</td><td>"+checkIn+"</td><td>"+checkOut+"</td><td>Team member is reviewing your booking and will call you as soon as possible</td></tr>");
         window.localStorage.setItem("bookings",bookings);
-        console.log("doing this")
+        console.log("doing this");
     }
     else{
-        var tableHeaders = '<table class="table table-striped" style="color: white;"><thead style="background-color: rgb(41, 40, 40);"><tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Handle</th></tr></thead><tbody style="background-color: white;color: black;">';
-        var booking = "<tr><th>"+location+"</th><td>"+checkIn+"</td><td>"+checkOut+"</td><td>Team member is reviewing your booking and will call you as soon as possible</td></tr>";
+        var tableHeaders = '<table class="table table-striped" style="color: white;"><thead style="background-color: rgb(41, 40, 40);"><tr><th scope="col">Location</th><th scope="col">Number of guests</th><th scope="col">Check-in Date</th><th scope="col">Check-out date</th><th scope="col">Comments</th></tr></thead><tbody style="background-color: white;color: black;">';
+        var booking = "<tr><th>"+location+"</th><td>"+guests+"</td><td>"+checkIn+"</td><td>"+checkOut+"</td><td>Team member is reviewing your booking and will call you as soon as possible</td></tr>";
         window.localStorage.setItem("bookings",tableHeaders.concat(booking));
         console.log("doing that")
     }
@@ -33,3 +33,11 @@ function storeBooking(){ //stores bookings in the localStorage
     console.log(window.localStorage.getItem("user"));
 }
 
+function loadBookings(){
+
+    console.log("working")
+    if(window.localStorage.getItem("bookings")){
+        console.log(window.localStorage.bookings.concat("</tbody></table>"));
+        document.getElementById("displayBookings").innerHTML= window.localStorage.bookings.concat("</tbody></table>");
+    }
+}
