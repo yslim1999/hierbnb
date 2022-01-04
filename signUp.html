@@ -51,18 +51,18 @@
 <div class="container" style="width: 75%;padding-bottom: 5rem;text-align: center;">
   <h3 class="contact_title">Sign In</h3>
   <div class="contact">
-    <p id="status"></p>
+    <p id="status_sign_in"></p>
     <form method="post" class="input">
-      <label for="uname">Username</label>
-      <input type="text" id="uname" name="username" placeholder="Username" required>
+      <label for="uname_">Username</label>
+      <input type="text" id="uname_" name="username" placeholder="Username" required>
 
-      <label for="pword">Password</label>
-      <input type="password" id="pword" name="Password" placeholder="Choose Password" required>
+      <label for="pword_">Password</label>
+      <input type="password" id="pword_" name="Password" placeholder="Choose Password" required>
       <!-- This will need some kind of validation with the original password -- that sounds like a javascript thing -->
 
       <!-- Comment test. -->
 
-      <button id="sign_up" class="submit_button" type="button" onclick="store()"><span>Submit</span></button>
+      <button id="sign_up" class="submit_button" type="button" onclick="retrieveRecords()"><span>Submit</span></button>
   </form>
   </div>
 </div>
