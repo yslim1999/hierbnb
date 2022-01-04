@@ -13,6 +13,10 @@ body::-webkit-scrollbar {
     width: 120px;
 }
 
+.logo_2{
+  width: 50px;
+}
+
 .bookings-container {
     background-color: #333;
     border-radius: 10px;

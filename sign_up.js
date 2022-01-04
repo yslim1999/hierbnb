@@ -36,13 +36,21 @@ function retrieveRecords(){ //retrieves items in the localStorage
     var record = JSON.parse(window.localStorage.getItem(key));
     if (record.valueOf() ==  pass.hashCode().valueOf()){
         window.localStorage.setItem("log_status", key);
+        document.getElementById('account').innerHTML = "Welcome " + key;
         alert("You have successfully signed in.")
     }
 }
 
 function sign_out(){
-    window.localStorage.removeItem("log_status");
-    alert("You are now logged out.")
+    if(window.localStorage.getItem("log_status")){
+        if (confirm('Are you sure you want to sign out?')) {
+            // Save it!
+            window.localStorage.removeItem("log_status");
+            console.log('You are now logged out.');
+            alert("You have logged out.")
+        } 
+    }
+    return;
 }
 
 String.prototype.hashCode = function() {
