@@ -22,21 +22,25 @@
     </div>
 </nav>
 
-<div class="container" style="width: 75%;padding-bottom: 5rem;text-align: center;">
+<div class="container" id="feedbackbox" style="width: 75%;padding-bottom: 5rem;text-align: center;" hidden>
+  <h3 class="contact_title" id="status_thing"></h3>
+</div>
+
+<div class="container" id="whole_container" style="width: 75%;padding-bottom: 5rem;text-align: center;">
   <h3 class="contact_title">Contact Form</h3>
     <div class="contact">
-      <form method="post" class="input">
+      <form id="form_1"method="post" class="input" action="javascript:contact_check()">
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required />
     
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required/>
 
         <label for="email">Email</label>
-        <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your email address.." required>
+        <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your email address.." required/>
     
         <label for="country">Branch</label>
-        <select id="country" name="country" class="country">
+        <select id="country" name="country" class="country"/>
           <option value="united kingdom">United Kingdom</option>
           <option value="france">France</option>
           <option value="spain">Spain</option>
@@ -45,11 +49,9 @@
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
     
-        <button class="submit_button" type="button" onclick="contact_check()"><span>Submit</span></button>
+        <button class="submit_button" type="submit"><span>Submit</span></button>
       </form>
     </div>
-
-    <p id="error"></p>
     
   </div>
 
