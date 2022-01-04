@@ -18,7 +18,7 @@ function storeBooking(){ //stores bookings in the localStorage
     if(window.localStorage.getItem("bookings")){
         var bookings = window.localStorage.getItem("bookings");
         bookings = bookings.concat("<tr><th>"+location+"</th><td>"+checkIn+"</td><td>"+checkOut+"</td><td>Team member is reviewing your booking and will call you as soon as possible</td></tr>");
-        window.localStorage.setItem("-bookings",bookings);
+        window.localStorage.setItem("bookings",bookings);
         console.log("doing this")
     }
     else{
@@ -28,5 +28,8 @@ function storeBooking(){ //stores bookings in the localStorage
         console.log("doing that")
     }
 
-    console.log(window.localStorage.getItem("bookings"))
+    console.log(window.localStorage.getItem("bookings"));
+    window.localStorage.setItem("user","jorge");
+    console.log(window.localStorage.getItem("user"));
 }
+
