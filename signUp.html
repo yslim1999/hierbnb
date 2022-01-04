@@ -19,11 +19,22 @@
         <a class="highlight" href="bookings.html">Bookings</a>
         <a class="highlight" href="locations.html">Locations</a>
         <a class="highlight" href="contact.html">Contact</a>
-        <a class="active highlight" href="signUp.html">Sign Up</a>
+        <a class="active highlight" href="signUp.html">Account</a>
       </div>
   </nav>
 
-  <div class="container" style="width: 75%;padding-bottom: 5rem;text-align: center;">
+  <!-- Tabs container ------------------------------->
+  <div class="signUp-container">
+
+    <ul class="nav nav-pills">
+      <li class="active"><a data-toggle="tab" href="#home">Sign In</a></li>
+      <li><a data-toggle="tab" href="#yourAccount">Sign Up</a></li>
+    </ul>
+
+        <!-- FIRST TAB ------------------------------->
+
+  <div class="tab-content container" style="width: 75%;padding-bottom: 5rem;text-align: center;">
+    <div id="home" class="tab-pane fade in active">
     <h3 class="contact_title">Sign In</h3>
     <div class="contact">
       <p id="status_sign_in"></p>
@@ -37,10 +48,12 @@
   
         <!-- Comment test. -->
   
-        <button id="sign_up" class="submit_button" type="submit"><span>Submit</span></button>
+        <button id="sign_" class="submit_button" type="submit"><span>Submit</span></button>
     </form>
     </div>
   </div>
+
+   <!-- Second TAB ------------------------------->
 
 <div class="container" style="width: 75%;padding-bottom: 5rem;text-align: center;">
     <h3 class="contact_title">Sign Up</h3>
