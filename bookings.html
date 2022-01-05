@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="main.css">
     <script src="https://use.fontawesome.com/8e6c72da53.js"></script>
     <script src="booking.js"></script>
-<body style="min-height: 100vh;" onload="loadBookings()">
-
-    <!-- Navbar ------------------------------->
     <script src="sign_up.js"></script>
+<body style="min-height: 100vh;" onload="loadBookings()">
+    <!-- Navbar ------------------------------->
 
 
   <nav class="navigation navbar navbar-expand-lg navbar-light ">
@@ -65,18 +64,18 @@
                     <div class="row" style="padding-bottom: 10px;">
                         <div class="col-sm-3">
                             <label for="check-in">Check In</label>
-                            <input style="color: #222;" type="date" id="check-in" name="cehck-in" required>
+                            <input max="" style="color: #222;" type="date" id="check-in" name="check-in" required>
                         </div>
 
                         <div class="col-sm-4">
                             <label for="check-out">Check-out</label>
-                            <input style="color: #222;" type="date" id="check-out" name="cehck-in" required>
+                            <input min="" style="color: #222;" type="date" id="check-out" name="check-out" required>
                         </div>
                 
                     </div>
 
-                    <label for="fname">Phone Number</label>
-                    <input type="text" id="number" name="number" placeholder="Your number" required>
+                    <label for="fname">Phone Number(UK)</label>
+                    <input type="text" id="number" name="number" placeholder="Your number" pattern="07[0-9]{9}" required>
                 
                     <label for="email">Number of Guests</label>
                     <input type="text" id="guests" name="guests" placeholder="# of Guests" required>

@@ -46,4 +46,20 @@ function loadBookings(){
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
       })
+
+    var fromDate;
+    $('#check-in').on('change',function(){
+      fromDate=$(this).val();
+      $('#check-out').prop('min',function(){
+        return fromDate;
+      })
+    });
+
+    var toDate;
+    $('#check-out').on('change',function(){
+        toDate=$(this).val();
+        $('#check-in').prop('max',function(){
+          return toDate;
+        })
+      });
 }
