@@ -41,6 +41,7 @@ function loadBookings(){
 
     if(!window.localStorage.getItem("log_status")){
         document.getElementById("makeBooking").innerHTML='<button id="makeBooking" class="submit_button" data-toggle="tooltip" data-placement="top" title="Please log in to place a booking"><span>Submit</span></button>'
+        document.getElementById("yourBookings").innerHTML= '<h2>View Your Bookings</h2><p>View all past, present and future bookings including pictures from your past events/stays.</p><hr><h3 style="text-align: center;padding-bottom: 10px;">Your Bookings</h3><div id="displayBookings" class="row" style="padding: 20px;"><div class="col-sm-4"><img src="home_svgs/undraw_booking_re_gw4j.svg" alt=""></div><div class="col-sm-8"><h4>Log in to view your bookings.</h4><p>Click <a href="signUp.html">here</a> to log in.</p></div></div><hr><h3 style="text-align: center;padding: 10px">Your Pictures</h3><div class="row" style="padding: 20px;"><div class="col-sm-4"><img src="home_svgs/undraw_photo_session_clqr.svg" alt=""></div><div class="col-sm-8"><h4>You have no pictures to view</h4><p>Talk to one of our team members for more information about our photography services.</p></div></div>';
     }
 
     $(function () {
