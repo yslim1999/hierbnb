@@ -12,7 +12,7 @@
   </head>
   <script src="sign_up.js"></script>
 
-  <body>
+  <body onload="account_status()">
   <nav class="navigation navbar navbar-expand-lg navbar-light ">
       <div class="container" style="width: 90%;text-align: center;">
           <a class="navbar-brand" href="home.html"><img class="logo" src="home_svgs/HeirBnB_Logo.svg" alt=""></a>
@@ -22,7 +22,7 @@
           <a class="highlight" href="contact.html">Contact</a>
           <a class="highlight" href="signUp.html">Account</a>
           <div style="float: right;" ><input type="image" class="logo_2" src="images/avatar_profile.jpg" alt="Avatar" class="avatar" onclick="sign_out()"/></div>
-          <a id="account" style="float: right;"> Welcome Guest</a>
+          <a id="account" style="float: right;"></a>
         </div>
     </nav>
 

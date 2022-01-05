@@ -53,6 +53,16 @@ function sign_out(){
     return;
 }
 
+function account_status(){
+    if(window.localStorage.getItem('log_status')){
+        document.getElementById('account').innerHTML = "Welcome " + window.localStorage.getItem('log_status');
+    }
+    else{
+        document.getElementById('account').innerHTML = "Welcome Guest";
+    }
+    return;
+}
+
 String.prototype.hashCode = function() {
     var hash = 0, i, chr;
     if (this.length === 0) return hash;
