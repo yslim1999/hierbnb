@@ -11,7 +11,7 @@
     <script src="https://use.fontawesome.com/8e6c72da53.js"></script>
     <script src="booking.js"></script>
     <script src="sign_up.js"></script>
-<body style="min-height: 100vh;" onload="loadBookings()">
+<body style="min-height: 100vh;" onload="loadBookings();account_status();">
     <!-- Navbar ------------------------------->
 
 
@@ -23,8 +23,8 @@
           <a class="highlight" href="locations.html">Locations</a>
           <a class="highlight" href="contact.html">Contact</a>
           <a class=" highlight" href="signUp.html">Account</a>
-          <div style="float: right;" ><input type="image" class="logo_2" src="images/avatar_profile.jpg" alt="Avatar" class="avatar" onclick="sign_out()"/></div>
-          <a id="account" style="float: right;"> Welcome Guest</a>
+          <div style="float: right;" ><input type="image" class="logo_2" src="images/avatar_guest.svg" alt="Avatar" class="avatar" onclick="sign_out()"/></div>
+          <a id="account" style="float: right;"></a>
         </div>
     </nav>
 

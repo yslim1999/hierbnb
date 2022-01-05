@@ -35,9 +35,11 @@ function retrieveRecords(){ //retrieves items in the localStorage
     document.getElementById('pword_').value = "";
     var record = JSON.parse(window.localStorage.getItem(key));
     if (record.valueOf() ==  pass.hashCode().valueOf()){
-        window.localStorage.setItem("log_status", key);
-        document.getElementById('account').innerHTML = "Welcome " + key;
+        window.localStorage.setItem('log_status', key);
+        document.getElementById('account').innerHTML = "Welcome " + window.localStorage.getItem('log_status');
         alert("You have successfully signed in.")
+    }else{
+        alert("Password did not match. Please try again.")
     }
 }
 
@@ -48,7 +50,18 @@ function sign_out(){
             window.localStorage.removeItem("log_status");
             console.log('You are now logged out.');
             alert("You have logged out.")
+            document.getElementById('account').innerHTML = "Welcome Guest";
         } 
+    }
+    return;
+}
+
+function account_status(){
+    if(window.localStorage.getItem('log_status')){
+        document.getElementById('account').innerHTML = "Welcome " + window.localStorage.getItem('log_status');
+    }
+    else{
+        document.getElementById('account').innerHTML = "Welcome Guest";
     }
     return;
 }

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="main.css">
   <script src="https://use.fontawesome.com/8e6c72da53.js"></script>
 </head>
-<body>
+<body onload="account_status()">
 <script src="contact_form.js"></script>
 
 <script src="sign_up.js"></script>
@@ -20,8 +20,8 @@
         <a class="highlight" href="locations.html">Locations</a>
         <a class="active highlight" href="contact.html">Contact</a>
         <a class="highlight" href="signUp.html">Account</a>
-        <div style="float: right;" ><input type="image" class="logo_2" src="images/avatar_profile.jpg" alt="Avatar" class="avatar" onclick="sign_out()"/></div>
-        <a id="account" style="float: right;"> Welcome Guest</a>
+        <div style="float: right;" ><input type="image" class="logo_2" src="images/avatar_guest.svg" alt="Avatar" class="avatar" onclick="sign_out()"/></div>
+        <a id="account" style="float: right;"></a>
       </div>
   </nav>
 
@@ -50,7 +50,7 @@
         </select>
     
         <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
     
         <button class="submit_button" type="submit"><span>Submit</span></button>
       </form>
