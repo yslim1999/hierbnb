@@ -35,8 +35,8 @@ function retrieveRecords(){ //retrieves items in the localStorage
     document.getElementById('pword_').value = "";
     var record = JSON.parse(window.localStorage.getItem(key));
     if (record.valueOf() ==  pass.hashCode().valueOf()){
-        window.localStorage.setItem("log_status", key);
-        document.getElementById('account').innerHTML = "Welcome " + key;
+        window.localStorage.setItem('log_status', key);
+        document.getElementById('account').innerHTML = "Welcome " + window.localStorage.getItem('log_status');
         alert("You have successfully signed in.")
     }
 }
