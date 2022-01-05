@@ -38,6 +38,8 @@ function retrieveRecords(){ //retrieves items in the localStorage
         window.localStorage.setItem('log_status', key);
         document.getElementById('account').innerHTML = "Welcome " + window.localStorage.getItem('log_status');
         alert("You have successfully signed in.")
+    }else{
+        alert("Password did not match. Please try again.")
     }
 }
 
