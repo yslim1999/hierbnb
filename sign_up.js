@@ -48,6 +48,7 @@ function sign_out(){
             window.localStorage.removeItem("log_status");
             console.log('You are now logged out.');
             alert("You have logged out.")
+            document.getElementById('account').innerHTML = "Welcome Guest";
         } 
     }
     return;
