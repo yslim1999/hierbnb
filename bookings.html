@@ -13,18 +13,21 @@
 <body style="min-height: 100vh;" onload="loadBookings()">
 
     <!-- Navbar ------------------------------->
-    <nav class="navigation navbar navbar-expand-lg navbar-light ">
-        <div class="container" style="width: 90%;text-align: center;">
-            <a class="navbar-brand" href="home.html"><img class="logo" src="home_svgs/HeirBnB_Logo.svg" alt=""></a>
-            <a class="highlight" href="home.html">Home</a>
-            <a class="active highlight" href="bookings.html">Bookings</a>
-            <a class="highlight" href="locations.html">Locations</a>
-            <a class="highlight" href="contact.html">Contact</a>
-            <a class="highlight" href="signUp.html">Sign Up</a>
-            <div style="float: right;" ><input type="image" class="logo_2" src="images/avatar_profile.jpg" alt="Avatar" class="avatar" onclick="sign_out()"/></div>
-            <a id="account" style="float: right;"> Welcome Guest</a>
-          </div>
-      </nav>
+    <script src="sign_up.js"></script>
+
+
+  <nav class="navigation navbar navbar-expand-lg navbar-light ">
+      <div class="container" style="width: 90%;text-align: center;">
+          <a class="navbar-brand" href="home.html"><img class="logo" src="home_svgs/HeirBnB_Logo.svg" alt=""></a>
+          <a class="highlight" href="home.html">Home</a>
+          <a class="active highlight" href="bookings.html">Bookings</a>
+          <a class="highlight" href="locations.html">Locations</a>
+          <a class="highlight" href="contact.html">Contact</a>
+          <a class=" highlight" href="signUp.html">Account</a>
+          <div style="float: right;" ><input type="image" class="logo_2" src="images/avatar_profile.jpg" alt="Avatar" class="avatar" onclick="sign_out()"/></div>
+          <a id="account" style="float: right;"> Welcome Guest</a>
+        </div>
+    </nav>
 
 
       <!-- Tabs container ------------------------------->
@@ -45,15 +48,12 @@
               <div class="row">
                 <div class="col-sm-4">
                     <h3>Initial Call</h3>
-                    <p style="float: left;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quibusdam quidem nobis nam, rerum dolor distinctio autem fugiat nemo rem consequatur quae facilis doloribus commodi exercitationem assumenda odio illum harum.</p>
                 </div>
                 <div class="col-sm-4">
                     <h3>Booking Confirmation</h3>
-                    <p style="float: left;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quibusdam quidem nobis nam, rerum dolor distinctio autem fugiat nemo rem consequatur quae facilis doloribus commodi exercitationem assumenda odio illum harum.</p>
                 </div>
                 <div class="col-sm-4">
                     <h3>Plan your Event/Stay</h3>
-                    <p style="float: left;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quibusdam quidem nobis nam, rerum dolor distinctio autem fugiat nemo rem consequatur quae facilis doloribus commodi exercitationem assumenda odio illum harum.</p>
                 </div>
               </div>
               <hr>
@@ -93,7 +93,10 @@
                     <label for="requests">Tell us more</label>
                     <textarea id="requests" name="requests" placeholder="Outline the vision for your stay/event.A team memeber will get back to you and help make it to reality." style="height:100px" required></textarea>
                 
-                    <button class="submit_button" onclick="storeBooking()"><span>Submit</span></button>
+                    <div id="makeBooking">
+                      <button class="submit_button" onclick="storeBooking()"><span>Submit</span></button>
+                    </div>
+                    
                   </form>
           </div>
 
